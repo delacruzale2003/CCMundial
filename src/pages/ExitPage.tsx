@@ -125,7 +125,7 @@ const ExitPage = () => {
 
                 {/* Nombre del Premio */}
                 {/* CAMBIO: Texto reducido a 2xl en móvil para nombres de premios largos */}
-                <p className="text-2xl sm:text-4xl drop-shadow-2xl font-mont-extrabold text-white mt-1 sm:mt-2 px-4 leading-tight w-60">
+                <p className="text-2xl sm:text-4xl drop-shadow-2xl font-mont-extrabold text-white mt-1 sm:mt-2 px-4 leading-tight w-70">
                     {prizeName} 
                 </p>
                 

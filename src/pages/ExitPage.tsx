@@ -101,7 +101,7 @@ const ExitPage = () => {
             </div>
 
             {/* Bloque del Premio */}
-            <div className="w-full px-2 flex flex-col items-center justify-center">
+            <div className="w-full px-2 flex flex-col items-center justify-center drop-shadow-2xl">
                 
                 {/* Contenedor de Imagen */}
                 {/* CAMBIO: Reduje la altura mínima del contenedor en móvil */}
@@ -125,7 +125,7 @@ const ExitPage = () => {
 
                 {/* Nombre del Premio */}
                 {/* CAMBIO: Texto reducido a 2xl en móvil para nombres de premios largos */}
-                <p className="text-2xl sm:text-4xl font-mont-extrabold text-white mt-1 sm:mt-2 px-4 leading-tight w-60">
+                <p className="text-2xl sm:text-4xl drop-shadow-2xl font-mont-extrabold text-white mt-1 sm:mt-2 px-4 leading-tight w-60">
                     {prizeName} 
                 </p>
                 

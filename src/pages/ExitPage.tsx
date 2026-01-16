@@ -82,15 +82,15 @@ const ExitPage = () => {
                 
                 {/* Logo Superior */}
                 <img
-                    src="/logoschfull.png"
+                    src="/logoballcc.png"
                     alt="Logo"
                     className="w-48 sm:w-60 h-auto mb-2" 
                 />
 
                 <div className="space-y-1">
-                    <h1 className="text-4xl sm:text-6xl text-black font-semibold leading-tight">
-                        <span className="block uppercase tracking-tighter font-mont-bold-italic">Felicidades</span>
-                        <span className="block text-4xl sm:text-4xl opacity-90 font-mont-bold">HAS GANADO</span>
+                    <h1 className="text-4xl sm:text-6xl text-white font-semibold leading-tight">
+                        <span className="block uppercase tracking-tighter font-mont-bold-italic text-white">Felicidades</span>
+                        <span className="block text-4xl sm:text-4xl opacity-90 font-mont-bold text-white">HAS GANADO</span>
                     </h1>
                 </div>
 
@@ -106,13 +106,13 @@ const ExitPage = () => {
                                 className="max-w-100 sm:max-w-100 object-contain drop-shadow-2xl animate-bounce-slow" 
                             />
                         ) : (
-                            <div className='flex items-center justify-center text-black font-bold italic animate-pulse'>
+                            <div className='flex items-center justify-center text-white font-bold italic animate-pulse'>
                                 Cargando premio...
                             </div>
                         )}
                     </div>
 
-                    <p className="text-4xl sm:text-4xl font-mont-extrabold text-black mt-2 px-4 leading-tight w-full">
+                    <p className="text-4xl sm:text-4xl font-mont-extrabold text-white mt-2 px-4 leading-tight w-full">
                         {prizeName} 
                     </p>
                     

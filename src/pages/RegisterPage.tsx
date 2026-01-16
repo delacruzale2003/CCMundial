@@ -225,11 +225,11 @@ const RegisterPage: React.FC = () => {
 
                             <p className="font-mont-regular">
 
-                                <strong className="font-mont-bold">Promoción válida del 05 de Enero al 05 de Febrero del 2026.</strong>
+                                <strong className="font-mont-bold">Promoción válida del 05 de Enero al 28 de Febrero del 2026.</strong>
 
                                 Mecanica:Participan personas naturales mayores de 18 años, con residencia legal y domicilio en el territorio nacional del Perú, que realicen la compra de <strong>Coca-Cola</strong> en las tiendas seleccionadas.
 
-                                para participar de la promoción <strong>SCHWEPPES VERANO 2026 , deberás escanear el código QR ubicado en las
+                                para participar de la promoción <strong>COCA-COLA COPA MUNDIAL 2026 , deberás escanear el código QR ubicado en las
 
                                     tiendas autorizadas, llenar los datos en el landing page, subir
 
@@ -243,9 +243,7 @@ const RegisterPage: React.FC = () => {
 
                                 <br /> <br />
 
-                                <strong>Los premios son toallas , gorras , mugs ,  y
-
-                                    destapadores.
+                                <strong>Los premios son tomatodos , toallas faciales , Botellas CC 300ml.
 
                                 </strong>
 

@@ -85,13 +85,13 @@ const ExitPage = () => {
             <img
                 src="/logoballcc.png"
                 alt="Logo"
-                className="w-36 sm:w-60 h-auto mb-1 sm:mb-2" 
+                className="w-40 sm:w-60 h-auto mb-1 sm:mb-2" 
             />
 
             <div className="space-y-0 sm:space-y-1">
                 {/* CAMBIO: Textos más pequeños en móvil (text-3xl y text-2xl) para ganar espacio */}
                 <h1 className="text-white font-semibold leading-tight">
-                    <span className="block uppercase tracking-tighter font-mont-bold-italic text-3xl sm:text-6xl text-white">
+                    <span className="block mt-8 uppercase tracking-tighter font-mont-bold-italic text-4xl sm:text-6xl text-white">
                         Felicidades
                     </span>
                     <span className="block text-2xl sm:text-4xl opacity-90 font-mont-bold text-white mt-1">
@@ -105,7 +105,7 @@ const ExitPage = () => {
                 
                 {/* Contenedor de Imagen */}
                 {/* CAMBIO: Reduje la altura mínima del contenedor en móvil */}
-                <div className="w-full flex justify-center items-center min-h-[140px] sm:min-h-[224px] py-2">
+                <div className="w-full flex justify-center items-center min-h-[140px] sm:min-h-[224px] ">
                     {prizeImageUrl ? (
                         <img 
                             src={prizeImageUrl} 
@@ -114,7 +114,7 @@ const ExitPage = () => {
                             // h-36 (altura fija en móvil, aprox 144px) evita que sea gigante.
                             // sm:h-auto (en escritorio deja que crezca).
                             // max-w-[80%] asegura que no toque los bordes.
-                            className="h-36 sm:h-auto w-auto max-w-[80%] sm:max-w-full object-contain drop-shadow-2xl animate-bounce-slow" 
+                            className="h-60 sm:h-auto w-auto max-w-[80%] sm:max-w-full object-contain drop-shadow-2xl animate-bounce-slow" 
                         />
                     ) : (
                         <div className='flex items-center justify-center text-white font-bold italic animate-pulse text-sm sm:text-base'>
@@ -125,7 +125,7 @@ const ExitPage = () => {
 
                 {/* Nombre del Premio */}
                 {/* CAMBIO: Texto reducido a 2xl en móvil para nombres de premios largos */}
-                <p className="text-2xl sm:text-4xl font-mont-extrabold text-white mt-1 sm:mt-2 px-4 leading-tight w-full">
+                <p className="text-2xl sm:text-4xl font-mont-extrabold text-white mt-1 sm:mt-2 px-4 leading-tight w-60">
                     {prizeName} 
                 </p>
                 

@@ -87,8 +87,8 @@ export const useRegistration = (): RegistrationHook => {
             validationError = "❌ Nombre no debe exceder los 45 caracteres.";
         } else if (trimmedPhone.length !== 9 || !/^\d+$/.test(trimmedPhone)) {
             validationError = "❌ Teléfono debe tener exactamente 9 dígitos.";
-        } else if (trimmedDni && (trimmedDni.length > 11 || !/^\d+$/.test(trimmedDni))) {
-            validationError = "❌ DNI/Cédula no debe exceder los 11 caracteres y solo acepta números.";
+        } else if (trimmedDni && (trimmedDni.length > 9 || !/^\d+$/.test(trimmedDni))) {
+            validationError = "❌ DNI no debe exceder los 9 caracteres";
         }
 
         if (validationError) {

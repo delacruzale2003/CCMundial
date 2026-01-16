@@ -70,56 +70,69 @@ const ExitPage = () => {
     }, [state]);
 
     return (
-        // CAMBIO 1: p-[10px] para dejar exactamente 10px de margen a los lados
-        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden p-[25px] overscroll-y-none">
+    // CAMBIO: Ajusté el padding a p-4 (16px) para un balance entre 10px y 25px.
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden p-4 overscroll-y-none">
+        
+        {/* BACKGROUND IMAGE */}
+        <BackgroundCC />
+
+        {/* CONTENIDO PRINCIPAL */}
+        {/* CAMBIO: space-y-2 en móvil (menos hueco) y space-y-6 en escritorio */}
+        <div className="relative z-10 w-full max-w-lg flex flex-col items-center text-center space-y-2 sm:space-y-6">
             
-            {/* BACKGROUND IMAGE */}
-            <BackgroundCC />
+            {/* Logo Superior */}
+            {/* CAMBIO: w-36 en móvil (más pequeño) -> w-60 en escritorio */}
+            <img
+                src="/logoballcc.png"
+                alt="Logo"
+                className="w-36 sm:w-60 h-auto mb-1 sm:mb-2" 
+            />
 
-            {/* CONTENIDO PRINCIPAL */}
-            {/* CAMBIO 2: Cambié max-w-md a max-w-lg para que sea un poco más ancho en pantallas grandes */}
-            <div className="relative z-10 w-full max-w-lg flex flex-col items-center text-center space-y-4">
+            <div className="space-y-0 sm:space-y-1">
+                {/* CAMBIO: Textos más pequeños en móvil (text-3xl y text-2xl) para ganar espacio */}
+                <h1 className="text-white font-semibold leading-tight">
+                    <span className="block uppercase tracking-tighter font-mont-bold-italic text-3xl sm:text-6xl text-white">
+                        Felicidades
+                    </span>
+                    <span className="block text-2xl sm:text-4xl opacity-90 font-mont-bold text-white mt-1">
+                        HAS GANADO
+                    </span>
+                </h1>
+            </div>
+
+            {/* Bloque del Premio */}
+            <div className="w-full px-2 flex flex-col items-center justify-center">
                 
-                {/* Logo Superior */}
-                <img
-                    src="/logoballcc.png"
-                    alt="Logo"
-                    className="w-48 sm:w-60 h-auto mb-2" 
-                />
-
-                <div className="space-y-1">
-                    <h1 className="text-4xl sm:text-6xl text-white font-semibold leading-tight">
-                        <span className="block uppercase tracking-tighter font-mont-bold-italic text-white">Felicidades</span>
-                        <span className="block text-4xl sm:text-4xl opacity-90 font-mont-bold text-white">HAS GANADO</span>
-                    </h1>
+                {/* Contenedor de Imagen */}
+                {/* CAMBIO: Reduje la altura mínima del contenedor en móvil */}
+                <div className="w-full flex justify-center items-center min-h-[140px] sm:min-h-[224px] py-2">
+                    {prizeImageUrl ? (
+                        <img 
+                            src={prizeImageUrl} 
+                            alt={`Premio: ${prizeName}`} 
+                            // CAMBIO IMPORTANTE: 
+                            // h-36 (altura fija en móvil, aprox 144px) evita que sea gigante.
+                            // sm:h-auto (en escritorio deja que crezca).
+                            // max-w-[80%] asegura que no toque los bordes.
+                            className="h-36 sm:h-auto w-auto max-w-[80%] sm:max-w-full object-contain drop-shadow-2xl animate-bounce-slow" 
+                        />
+                    ) : (
+                        <div className='flex items-center justify-center text-white font-bold italic animate-pulse text-sm sm:text-base'>
+                            Cargando premio...
+                        </div>
+                    )}
                 </div>
 
-                {/* Bloque del Premio */}
-                <div className="w-full px-2 py-2 flex flex-col items-center justify-center">
-                    
-                    {/* Contenedor de Imagen */}
-                    <div className="w-full flex justify-center items-center min-h-[180px] sm:min-h-[224px]">
-                        {prizeImageUrl ? (
-                            <img 
-                                src={prizeImageUrl} 
-                                alt={`Premio: ${prizeName}`} 
-                                className="max-w-100 sm:max-w-100 object-contain drop-shadow-2xl animate-bounce-slow" 
-                            />
-                        ) : (
-                            <div className='flex items-center justify-center text-white font-bold italic animate-pulse'>
-                                Cargando premio...
-                            </div>
-                        )}
-                    </div>
-
-                    <p className="text-4xl sm:text-4xl font-mont-extrabold text-white mt-2 px-4 leading-tight w-full">
-                        {prizeName} 
-                    </p>
-                    
-                </div>
+                {/* Nombre del Premio */}
+                {/* CAMBIO: Texto reducido a 2xl en móvil para nombres de premios largos */}
+                <p className="text-2xl sm:text-4xl font-mont-extrabold text-white mt-1 sm:mt-2 px-4 leading-tight w-full">
+                    {prizeName} 
+                </p>
+                
             </div>
         </div>
-    );
+    </div>
+);
 };
 
 export default ExitPage;

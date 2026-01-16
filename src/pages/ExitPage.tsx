@@ -71,7 +71,7 @@ const ExitPage = () => {
 
     return (
         // CAMBIO 1: p-[10px] para dejar exactamente 10px de margen a los lados
-        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden p-[10px] overscroll-y-none">
+        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden p-[25px] overscroll-y-none">
             
             {/* BACKGROUND IMAGE */}
             <BackgroundCC />
